@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser=require('cookie-parser');
 const session=require('express-session');
+let port=process.env.PORT || 3000;
 
 const app= express();
 const flash=require('connect-flash');
@@ -11,15 +12,19 @@ const flash=require('connect-flash');
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-const url = 'mongodb://127.0.0.1:27017/Shop';
-mongoose.connect(url, { useNewUrlParser: true },(err)=>{
-    if(err){
-        console.log("an error occurred");
-    }
-    else{
-        console.log("db has connected");
-    }
-});
+//const url = 'mongodb://127.0.0.1:27017/Shop';
+///mongoose.connect(url, { useNewUrlParser: true },(err)=>{
+ //   if(err){
+  //      console.log("an error occurred");
+  //  }
+ //   else{
+ //       console.log("db has connected");
+ //   }
+//});
+mongoose
+    .connect('mongodb+srv://gudron:gudron@cluster.i6zdr.mongodb.net/Shop?retryWrites=true&w=majority', {
+        useNewUrlParser: true
+    })
 
 app.set('view engine','ejs');
 
@@ -68,4 +73,4 @@ app.get('/', (req,res)=>{
 
 })
 
-app.listen(3000, () => console.log('The server is running port 3000...'));
+app.listen(port, () => console.log('The server is running port 3000...'));
