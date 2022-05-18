@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser=require('cookie-parser');
 const session=require('express-session');
 
-const app = express();
+const app= express();
 const flash=require('connect-flash');
 
 
