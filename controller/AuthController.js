@@ -19,7 +19,7 @@ const register=(req, res, next) => {
             password: hashedPass,
             city:req.body.city,
             age:req.body.age,
-            isAdmin:false,
+            isAdmin:true,
         },)
 
 
