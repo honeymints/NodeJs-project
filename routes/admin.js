@@ -14,13 +14,14 @@ router.get('/', (req,res)=>{
 router.post('/', (req,res)=>{
     const obj = JSON.parse(JSON.stringify(req.body));
 
+
     User.find({}, function (err, docs) {
        if (err){
             console.log(err);
         }
       else{
             res.render('register2', {data:{name: docs}})
-        }
+      }
     });
 
 });

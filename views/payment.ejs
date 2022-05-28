@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Admin</title>
+    <title>register</title>
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <script src="server.js"></script>
@@ -18,7 +18,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="home">
+                                    <a href="index.html">
                                         <b style="color: #A42CD6;
                               font-size: 30px;">Minho</b>
                                     </a>
@@ -32,7 +32,7 @@
                             <div class="limit-box">
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
-                                        <li class="active"> <a href="home">Home</a> </li>
+                                        <li class="active"> <a href="index.html">Home</a> </li>
 
                                     </ul>
                                 </nav>
@@ -46,43 +46,28 @@
     <center>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <div class="main">
-            </br>
-            <div class="first">
-                <div class="head">
-                    <center>Admin Page </center>
-                    </div>
-                </br></br></br>
-                <center>
-                    <form action="/display" method="get">
-                        <button>display users</button>
-                    </form>
 
-                    <form action="/add" method="get">
-                        <button>add a user</button>
+        <h3 style="color: #A42CD6;">Personal information for payments<img style="width: 100px;height: auto;"src="../images/2.png"> </h3>
+        <div>
+            <form action="/success">
+                <label for="fname">Card number</label></br>
+                <input type="text" id="fname" required="" name="firstname" placeholder="Valid card number.."></br>
 
-                    </form>
-                <form action="/delete" method="get">
-                    <button>delete a user</button>
-                </form>
-                <form action="/edit" method="get">
-                    <button>edit</button>
-                </form>
-                <form action="/sort" method="post">
-                    <button>Sort by name</button>
-                </form>
-                    <form action="/sortCity" method="post">
-                        <button>Sort by city</button>
-                    </form>
-                    </center>
-            </div>
-            <div class="second">
-            <img src="https://i.pinimg.com/564x/2a/5b/f9/2a5bf97406c105f560e52a672c645ca2.jpg">
-            </div>
+                </br><label for="lname">Expiration date</label></br>
+                <input type="text" id="lname" required="" name="lastname" placeholder="MM/YY.."></br>
+
+                </br><label for="fname">CV code</label></br>
+                <input type="text" id="fname" required="" name="firstname" placeholder="CVC.."></br>
+
+
+                </br><label for="fname">Name of card</label></br>
+                <input type="text" id="fname" required="" name="firstname" placeholder="Name and surname..."></br>
+
+
+                <input type="submit" value="Submit">
+                </br>
+            </form>
         </div>
-    </br>
-
-
     </center>
 
     <footr>
@@ -142,16 +127,10 @@
 </header>
 </body>
 <style>
-    .head{
-        background-color: #9D00FF;
-        width: 75%;
-        height: 50px;
-        font-size: 25px;
-    }
-    button{
+    input[type=submit]{
         transition-duration: 0.4s;
         cursor: pointer;
-        width:75%;
+        width:25%;
         height: 50px;
         font-size: 20px;
         color: white;
@@ -177,5 +156,20 @@
     .second{
         width: 50%;
     }
-    </style>
+    td{
+        font-size: 18px;
+    }
+    input[type=text], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+</style>
 </html>
+
+
+▲

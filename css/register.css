@@ -1,10 +1,10 @@
 body{
   background-color: #4f4581;
+  font-family:"Gill Sans MT";!important;
 }
 * {
  font-family: aria;
 }
-
 
 h1 {
   color: darkorchid;
@@ -32,7 +32,7 @@ input[type=email]:focus{
 }
 
 .form-horizontal{
-  width: 320px;
+  width: 340px;
   background-color: #faefff;
   padding: 25px 30px;
   border-radius: 10px;
@@ -78,7 +78,7 @@ input[type=email]:focus{
   margin: 0 auto 5px;
   padding:8px 0;
   border-color:#A42CD6 !important;
-  align-items: center !important;
+  position: center !important;
 }
 
 .btn-primary:hover{

@@ -75,14 +75,25 @@
                                             <div class="out"></div>
                                         </center>
 
-                                        <li class="active"> <a href="home">Home</a> </li>
 
+                                        <% if (user) {%>
+                                        <li> Welcome, <%=user.username%></li>
+                                        <li class="active"> <a href="home">Home</a> </li>
                                         <li> <a href="quotes">quotes :)</a> </li>
-                                        <li> <a href="#about">Go to shop</a> </li>
-                                        <li> <a href="home">Minho</a> </li>
+                                        <li> <a href="/shop">Go to shop</a> </li>
+                                        <li> <a href="#contact">Contact Us</a> </li>
+                                        <li> <a href="logout">Log out</a> </li>
+                                        <% } else { %>
+                                            <li class="active"> <a href="home">Home</a> </li>
+                                        <li> <a href="quotes">quotes :)</a> </li>
+                                        <li> <a href="/shop">Go to shop</a> </li>
                                         <li> <a href="#contact">Contact Us</a> </li>
                                         <li><a href="register">Register</a></li>
                                         <li><a href="login">Login</a></li>
+                                        <% } %>
+
+
+
                                     </ul>
                                 </nav>
                             </div>
@@ -231,7 +242,7 @@
                         Kpop Merchandise Online is your KPOP one-stop shop for selling KPOP products. We are the individual
                         official Kpop March store for Kpop fashion. If you don't see your group here, let us know and we will find
                         the product for you.</p>
-                    <a href="Javascript:void(0)">Read more</a>
+                    <a href="/shop">click me!</a>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding_rl">

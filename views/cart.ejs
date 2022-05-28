@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Admin</title>
+    <title>register</title>
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <script src="server.js"></script>
@@ -18,7 +18,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="home">
+                                    <a href="index.html">
                                         <b style="color: #A42CD6;
                               font-size: 30px;">Minho</b>
                                     </a>
@@ -32,8 +32,10 @@
                             <div class="limit-box">
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
-                                        <li class="active"> <a href="home">Home</a> </li>
-
+                                        <li class="active"> <a href="/home">Home</a> </li>
+                                        <li class="active"> <a href="/account">Account</a> </li>
+                                        <li class="active"> <a href="/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop">Shop</a> </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -49,38 +51,26 @@
         <div class="main">
             </br>
             <div class="first">
-                <div class="head">
-                    <center>Admin Page </center>
-                    </div>
-                </br></br></br>
-                <center>
-                    <form action="/display" method="get">
-                        <button>display users</button>
-                    </form>
 
-                    <form action="/add" method="get">
-                        <button>add a user</button>
 
-                    </form>
-                <form action="/delete" method="get">
-                    <button>delete a user</button>
-                </form>
-                <form action="/edit" method="get">
-                    <button>edit</button>
-                </form>
-                <form action="/sort" method="post">
-                    <button>Sort by name</button>
-                </form>
-                    <form action="/sortCity" method="post">
-                        <button>Sort by city</button>
-                    </form>
+                    <h1>product name - <%=docss.name %></h1>
+                    <center> <div class="descr">According to the Law "On Consumer Rights Protection", the buyer has the right to exchange the purchased goods that do not meet his needs or do not have the necessary properties. A mandatory condition of the exchange is the preservation of the presentation, consumer properties, seals or labels, a commodity or cash receipt or other documents issued to the consumer by the seller together with the goods sold. If a similar product is not on sale at the time of the exchange, the consumer has the right to purchase other goods from the available assortment with a corresponding recalculation of the cost of the goods, or to receive money back in the amount of the cost of the goods, or to exchange it for a similar one when the corresponding product is on sale for the first time.</div>
                     </center>
+                    <form action="/cart" method="post">
+                        <button name="name" value="<%=docss.name%>">add in cart</button>
+                    </form>
+                <form action="/shop" method="get">
+                    <button>back</button>
+                </form>
+
             </div>
             <div class="second">
-            <img src="https://i.pinimg.com/564x/2a/5b/f9/2a5bf97406c105f560e52a672c645ca2.jpg">
+                <img src="<%=docss.image %>">
+
             </div>
         </div>
-    </br>
+        </div>
+        </br>
 
 
     </center>
@@ -163,8 +153,17 @@
     button:hover {
         background-color: #F2A2E8;
     }
+    .descr{
+        color: #000;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 1em auto 2em;
+        text-align: justify;
+        text-justify: inter-word;
+    }
     img{
-        width: 60%;
+        width:350px;
         height: auto;
     }
     .main{
@@ -177,5 +176,8 @@
     .second{
         width: 50%;
     }
-    </style>
+    td{
+        font-size: 18px;
+    }
+</style>
 </html>

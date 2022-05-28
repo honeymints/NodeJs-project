@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Admin</title>
+    <title>register</title>
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <script src="server.js"></script>
@@ -18,7 +18,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="home">
+                                    <a href="/home">
                                         <b style="color: #A42CD6;
                               font-size: 30px;">Minho</b>
                                     </a>
@@ -32,8 +32,10 @@
                             <div class="limit-box">
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
-                                        <li class="active"> <a href="home">Home</a> </li>
-
+                                        <li class="active"> <a href="/home">Home</a> </li>
+                                        <li class="active"> <a href="/account">Account</a> </li>
+                                        <li class="active"> <a href="/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop">Shop</a> </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -50,37 +52,42 @@
             </br>
             <div class="first">
                 <div class="head">
-                    <center>Admin Page </center>
-                    </div>
+                    <center>Cart </center>
+                </div>
                 </br></br></br>
                 <center>
-                    <form action="/display" method="get">
-                        <button>display users</button>
-                    </form>
+                    <%data.name.forEach(items=>{%>
+                    <center> <table>
+                            <tr>
+                                <form action="/deletecart" method="post">
+                                    <input type="text"  name="name" value="<%=items.name %>">
+                                    <input type="submit" class="view" value="-" />
+                                </form>
+                                <form action="/cart" method="post">
+                                    <button name="name" class="view" value="<%=items.name%>">+</button>
+                                </form>
+                                <form action="/users" method="post">
+                                    <button class="view" name="name" value="<%=items.name %>">
+                                        view </button>
+                                </form>
+                            </tr>
 
-                    <form action="/add" method="get">
-                        <button>add a user</button>
-
+                        </table></center>
+                    <%})
+                    %>
+                    <form action="/payment" method="get">
+                        <button>buy now</button>
                     </form>
-                <form action="/delete" method="get">
-                    <button>delete a user</button>
-                </form>
-                <form action="/edit" method="get">
-                    <button>edit</button>
-                </form>
-                <form action="/sort" method="post">
-                    <button>Sort by name</button>
-                </form>
-                    <form action="/sortCity" method="post">
-                        <button>Sort by city</button>
+                    <form action="/shop" method="get">
+                        <button>back</button>
                     </form>
-                    </center>
+                </center>
             </div>
             <div class="second">
-            <img src="https://i.pinimg.com/564x/2a/5b/f9/2a5bf97406c105f560e52a672c645ca2.jpg">
+                <img src="https://i.pinimg.com/564x/77/be/a3/77bea3379cd5ad7294a6359e4cd2e297.jpg">
             </div>
         </div>
-    </br>
+        </br>
 
 
     </center>
@@ -148,6 +155,15 @@
         height: 50px;
         font-size: 25px;
     }
+    .view{
+        transition-duration: 0.4s;
+        width:10%;
+        height: 25px;
+        font-size: 10px;
+        color: white;
+        background-color: #9D00FF;
+        border: 1px solid white;
+    }
     button{
         transition-duration: 0.4s;
         cursor: pointer;
@@ -177,5 +193,8 @@
     .second{
         width: 50%;
     }
-    </style>
+    td{
+        font-size: 18px;
+    }
+</style>
 </html>

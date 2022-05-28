@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shop</title>
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="server.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body style="background-color: #C6AEC7; min-height: 100%">
+<header>
+    <!-- header inner -->
+    <div class="header-top">
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-4 col-md-4 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo">
+                                    <a href="/home">
+                                        <b style="color: #A42CD6;
+                              font-size: 30px;">Minho</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-8 col-md-8 col-sm-9">
+
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu ">
+                                    <ul class="menu-area-main">
+                                        <li class="active"> <a href="/home">Home</a> </li>
+
+                                        <li class="active"> <a href="/account">Account</a> </li>
+                                        <li class="active"> <a href="/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop">Shop</a> </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="headLog"> </br>
+        <center><h4>the range of goods of the store</h4>
+        <hr> </br>
+         </center>
+        </div>
+    <div class="wrap">
+    <div class="gallery">
+        <form action="/items" method="post">
+            <button name="name" value="bag">
+                <img src="https://i.pinimg.com/564x/be/6a/27/be6a2730c7e55f3ced6c408f133c4a65.jpg" alt="Cinque Terre" width="600" height="400"> </button>
+        </form> <div class="desc"> <b>m i n h o</b> </br> <i>bag &#36 10</i></div>
+    </div>
+
+        <div class="gallery">
+            <form action="/items" method="post">
+                <button name="name" value="bottle">
+                    <img src="https://i.pinimg.com/564x/fa/6e/75/fa6e75a2fae05ddc4007bd98381ada0f.jpg" alt="Northern Lights" width="600" height="400"> </button>
+            </form>  <div class="desc"> <b>m i n h o</b> </br> <i>bottle &#36 8</i></div>
+        </div>
+
+    <div class="gallery">
+        <form action="/items" method="post">
+        <button name="name" value="rack">
+            <img src="https://i.pinimg.com/736x/11/f3/ad/11f3ad58c91bd0c6a2fa62ac75e4e865.jpg" alt="Northern Lights" width="600" height="400">
+        </button>
+        </form>
+        <div class="desc"> <b>m i n h o</b> </br> <i>rack &#36 5</i></div>
+    </div>
+    </div>
+    <div class="wrap">
+        <div class="gallery">
+            <form action="/items" method="post">
+                <button name="name" value="note">
+                    <img src="https://i.pinimg.com/564x/04/7b/0a/047b0a1108a49d9398b3d280340e3687.jpg" alt="Cinque Terre" width="600" height="400"> </button>
+            </form>
+            <div class="desc"> <b>m i n h o</b> </br> <i>note &#36 4</i></div>
+        </div>
+
+            <div class="gallery">
+                <form action="/items" method="post">
+                    <button name="name" value="keyboard">
+                        <img src="https://i.pinimg.com/564x/36/11/97/361197686831781e0d73747f13d28238.jpg" alt="Cinque Terre" width="600" height="400"> </button>
+                </form>
+            <div class="desc"> <b>m i n h o</b> </br> <i>keyboard &#36 4</i></div>
+        </div>
+
+            <div class="gallery">
+                <form action="/items" method="post">
+                    <button name="name" value="player">
+                        <img src="https://i.pinimg.com/564x/35/db/e8/35dbe8c456c881e78eb9607cd85b6a17.jpg" alt="Cinque Terre" width="600" height="400"> </button>
+                </form>
+            <div class="desc"> <b>m i n h o</b> </br> <i>player  &#36 16</i></div>
+        </div>
+
+    </div>
+</header>
+</body>
+<style>
+    .wrap{
+        display:flex;
+        justify-content: space-between ;
+    }
+    div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        width: 20%;
+    }
+
+    div.gallery:hover {
+        border: 1px solid #777;
+    }
+
+    div.gallery img {
+        width: 75%;
+        height: auto;
+    }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+    hr{
+    color: black;
+    }
+</style>
+</html>

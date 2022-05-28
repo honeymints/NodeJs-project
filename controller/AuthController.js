@@ -5,6 +5,12 @@ const express = require("express");
 
 const app=express();
 
+const maxAge = 3 * 24 * 60 * 60;
+const createToken=(id)=>{
+    return jwt.sign({id}, 'secret token',
+        {expiresIn:maxAge})
+};
+
 const register=(req, res, next) => {
 
     bcrypt.hash(req.body.psw, 10, (err, hashedPass) => {
@@ -19,8 +25,10 @@ const register=(req, res, next) => {
             password: hashedPass,
             city:req.body.city,
             age:req.body.age,
-            isAdmin:true,
+            isAdmin:false, //123456
         },)
+        const token=createToken(user._id);
+        res.cookie('jwt', token,{httpOnly:true, maxAge:maxAge*1000});
 
 
         if (req.body.name == '' || req.body.email == '' || req.body.password=='' || req.body.city=='' || req.body.age=='') {
@@ -36,7 +44,7 @@ const register=(req, res, next) => {
             user.save()
                 .then(user => {
                     app.use(express.static(__dirname + '/'));
-                    res.redirect('home');
+                    res.redirect('/home');
                 })
                 .catch(user=>{
                     req.flash('message-danger', "Email is already used")
@@ -69,13 +77,14 @@ const login =(req,res,next)=> {
                         }
                         if (result)
                         {
+                            const token=createToken(user._id);
+                            res.cookie('jwt', token,{httpOnly:true, maxAge:maxAge*1000});
                             console.log('login success')
-                            let token = jwt.sign({name: user.username}, 'verySecretValue', {expiresIn: '1h'})
                             if(!user.isAdmin) {
-                                //req.flash('message-danger', "Login success!");
+
                                 app.use(express.static(__dirname + '/'));
-                                res.redirect('home');
-                                console.log(token);
+                                res.redirect('/shop');
+
                             }
                             else{
                                 res.redirect('admin')
@@ -99,6 +108,11 @@ const login =(req,res,next)=> {
 
     }
 }
+
+const logout_get=(req,res)=>{
+    res.cookie('jwt', '', {maxAge:1});
+    res.redirect('/home')
+}
 module.exports={
-    register,login
+    register,login,logout_get
 }

@@ -1,5 +1,3 @@
-
-
 let state=false;
 let password=document.getElementById('password');
 let passwordStrength=document.getElementById('password-strength');
@@ -41,7 +39,6 @@ function checkStrength(password){
         lowerUpperCase.classList.add('fa-circle');
        lowerUpperCase.classList.remove('fa-check')
    }
-
     //if password has a number
     if(password.match(/([0-9])/)){
         strength+=1;
@@ -71,6 +68,7 @@ function checkStrength(password){
         sevenChar.classList.add('fa-circle');
         sevenChar.classList.remove('fa-check');
     }
+
     if(strength==0){
         passwordStrength.style= 'width:0%';
     }
@@ -80,13 +78,13 @@ function checkStrength(password){
         passwordStrength.classList.add('progress-bar-danger');
         passwordStrength.style='width:10%';
     }
-    else if(strength==3){
+    else if(strength==4){
         passwordStrength.classList.remove('progress-bar-success');
         passwordStrength.classList.remove('progress-bar-danger');
         passwordStrength.classList.add('progress-bar-warning');
         passwordStrength.style='width:60%';
     }
-    else if(strength==4){
+    else if(strength==6){
         passwordStrength.classList.remove('progress-bar-danger');
         passwordStrength.classList.remove('progress-bar-warning');
         passwordStrength.classList.add('progress-bar-success');
@@ -96,7 +94,7 @@ function checkStrength(password){
 }
 function manage(password) {
     var bt = document.getElementById('registerBTN');
-    if (strength>6) {
+    if (strength>7) {
         bt.disabled = false;
     }
     else {
