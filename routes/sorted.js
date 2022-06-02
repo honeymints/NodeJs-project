@@ -5,7 +5,7 @@ const User=require('../models/User');
 let router=express.Router();
 app.use(express.static(__dirname));
 
-router.post('/', function(request, response, next){
+router.post('/sort', function(request, response, next){
 
 
     let mysort = {name: 1};

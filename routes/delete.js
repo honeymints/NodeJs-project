@@ -5,7 +5,7 @@ const User=require('../models/User');
 let router=express.Router();
 app.use(express.static(__dirname));
 
-router.get('/', (req,res)=>{
+router.get('/delete', (req,res)=>{
     User.find({}, function (err, docs) {
         if (err){
             console.log(err);
@@ -15,8 +15,8 @@ router.get('/', (req,res)=>{
         }
     });
 
-});
-router.post('/', function(request, response, next){
+})
+.post('/delete', function(request, response, next){
 
     User.deleteMany({ email: request.body.email}, function(err,docs) {
         if (err) throw err;

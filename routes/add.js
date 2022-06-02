@@ -6,12 +6,13 @@ const bcrypt = require("bcryptjs");
 let router=express.Router();
 app.use(express.static(__dirname));
 
-router.get('/', function(req, res, next){
+router
+    .get('/add', function(req, res, next){
     let message=req.flash('message-danger');
     res.render('add',{message});
     app.use(express.static(__dirname + '/'));
 })
-router.post('/', function(req, res, next){
+.post('/add', function(req, res, next){
     bcrypt.hash(req.body.password, 10, (err, hashedPass) => {
         if (err) {
             res.json({

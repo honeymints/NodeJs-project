@@ -4,7 +4,7 @@
 <head>
     <title>Shop</title>
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="server.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -36,9 +36,10 @@
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="/home">Home</a> </li>
-
-                                        <li class="active"> <a href="/account">Account</a> </li>
-                                        <li class="active"> <a href="/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop/newprod">New Products!</a> </li>
+                                        <li class="active"> <a href="/shop/reviews">Reviews</a> </li>
+                                        <li class="active"> <a href="/shop/account">Account</a> </li>
+                                        <li class="active"> <a href="/shop/cart">Cart</a> </li>
                                         <li class="active"> <a href="/shop">Shop</a> </li>
                                     </ul>
                                 </nav>
@@ -56,21 +57,21 @@
         </div>
     <div class="wrap">
     <div class="gallery">
-        <form action="/items" method="post">
+        <form action="/shop/items" method="post">
             <button name="name" value="bag">
                 <img src="https://i.pinimg.com/564x/be/6a/27/be6a2730c7e55f3ced6c408f133c4a65.jpg" alt="Cinque Terre" width="600" height="400"> </button>
         </form> <div class="desc"> <b>m i n h o</b> </br> <i>bag &#36 10</i></div>
     </div>
 
         <div class="gallery">
-            <form action="/items" method="post">
+            <form action="/shop/items" method="post">
                 <button name="name" value="bottle">
                     <img src="https://i.pinimg.com/564x/fa/6e/75/fa6e75a2fae05ddc4007bd98381ada0f.jpg" alt="Northern Lights" width="600" height="400"> </button>
             </form>  <div class="desc"> <b>m i n h o</b> </br> <i>bottle &#36 8</i></div>
         </div>
 
     <div class="gallery">
-        <form action="/items" method="post">
+        <form action="/shop/items" method="post">
         <button name="name" value="rack">
             <img src="https://i.pinimg.com/736x/11/f3/ad/11f3ad58c91bd0c6a2fa62ac75e4e865.jpg" alt="Northern Lights" width="600" height="400">
         </button>
@@ -80,7 +81,7 @@
     </div>
     <div class="wrap">
         <div class="gallery">
-            <form action="/items" method="post">
+            <form action="/shop/items" method="post">
                 <button name="name" value="note">
                     <img src="https://i.pinimg.com/564x/04/7b/0a/047b0a1108a49d9398b3d280340e3687.jpg" alt="Cinque Terre" width="600" height="400"> </button>
             </form>
@@ -88,7 +89,7 @@
         </div>
 
             <div class="gallery">
-                <form action="/items" method="post">
+                <form action="/shop/items" method="post">
                     <button name="name" value="keyboard">
                         <img src="https://i.pinimg.com/564x/36/11/97/361197686831781e0d73747f13d28238.jpg" alt="Cinque Terre" width="600" height="400"> </button>
                 </form>
@@ -96,7 +97,7 @@
         </div>
 
             <div class="gallery">
-                <form action="/items" method="post">
+                <form action="/shop/items" method="post">
                     <button name="name" value="player">
                         <img src="https://i.pinimg.com/564x/35/db/e8/35dbe8c456c881e78eb9607cd85b6a17.jpg" alt="Cinque Terre" width="600" height="400"> </button>
                 </form>

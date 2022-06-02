@@ -4,7 +4,7 @@
 <head>
     <title>Admin</title>
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="server.js"></script>
 </head>
 <body style="background-color: #C6AEC7; min-height: 100%">
@@ -18,7 +18,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="home">
+                                    <a href="/home">
                                         <b style="color: #A42CD6;
                               font-size: 30px;">Minho</b>
                                     </a>
@@ -32,7 +32,11 @@
                             <div class="limit-box">
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
-                                        <li class="active"> <a href="home">Home</a> </li>
+                                        <li class="active"> <a href="/home">Home</a> </li>
+                                        <li class="active"> <a href="/shop/newprod">New Products!</a> </li>
+                                        <li class="active"> <a href="/shop/reviews">Reviews</a> </li>
+                                        <li class="active"> <a href="/shop/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop">Shop</a> </li>
 
                                     </ul>
                                 </nav>
@@ -54,24 +58,33 @@
                     </div>
                 </br></br></br>
                 <center>
-                    <form action="/display" method="get">
+                    <form action="/admin/adminchat" method="get">
+                        <button>Admin chat</button>
+                    </form>
+                    <form action="/shop/newprod" method="get">
+                        <button>view new product</button>
+                    </form>
+                    <form action="/admin/addprod" method="get">
+                        <button>add new product</button>
+                    </form>
+                    <form action="/admin/display" method="get">
                         <button>display users</button>
                     </form>
 
-                    <form action="/add" method="get">
+                    <form action="/admin/add" method="get">
                         <button>add a user</button>
 
                     </form>
-                <form action="/delete" method="get">
+                <form action="/admin/delete" method="get">
                     <button>delete a user</button>
                 </form>
-                <form action="/edit" method="get">
+                <form action="/admin/edit" method="get">
                     <button>edit</button>
                 </form>
-                <form action="/sort" method="post">
+                <form action="/admin/sort" method="post">
                     <button>Sort by name</button>
                 </form>
-                    <form action="/sortCity" method="post">
+                    <form action="/admin/sortCity" method="post">
                         <button>Sort by city</button>
                     </form>
                     </center>

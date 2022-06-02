@@ -1,10 +1,9 @@
 let path=require('path');
 const express = require('express');
 let router=express.Router();
-//const {checkUser}=require('../middleware/authMiddleware')
 const authController=require('../controller/AuthController')
 router.get('/',  function(req, res) {
-    res.render('home' )
+    res.render('home')
 
 });
 

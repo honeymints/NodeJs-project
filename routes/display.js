@@ -5,7 +5,7 @@ const User=require('../models/User');
 let router=express.Router();
 app.use(express.static(__dirname))
 
-router.get('/', (req,res)=>{
+router.get('/display', (req,res)=>{
 
     User.find({isAdmin:false}, function (err, docs) {
         if (err){

@@ -1,6 +1,10 @@
 const mongoose=require('mongoose');
-const Schema=mongoose.Schema;
-const cart =new Schema({
+
+const cart =new mongoose.Schema({
+    user: {
+        type: String,
+    },
+    quantity: { type: Number },
     name: { type: String },
 })
 const Carts=mongoose.model('Cart', cart);

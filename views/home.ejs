@@ -30,20 +30,11 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <script>
-        let timerVariable = setInterval(count, 1000);
-        let i = 0;
-        function count() {++i;}
-        function stop() {document.querySelector('.out').innerHTML = i + 's seconds ago';}</script>
 </head>
 <!-- body -->
 
 <body class="main-layout">
-<!-- loader  -->
-<div class="loader_bg">
-    <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-</div>
-<!-- end loader -->
+
 <!-- header -->
 <header>
     <!-- header inner -->
@@ -55,7 +46,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="/home">
                                         <b style="color: #A42CD6;
                       font-size: 30px;">Minho</b>
                                     </a>
@@ -69,27 +60,21 @@
                             <div class="limit-box">
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
-                                        <center> <button id="stop_count_up_timer" style="color: #571e69;" onclick="stop()">your last visit to the
-                                                site</button>
-                                            </br>
-                                            <div class="out"></div>
-                                        </center>
+
 
 
                                         <% if (user) {%>
                                         <li> Welcome, <%=user.username%></li>
-                                        <li class="active"> <a href="home">Home</a> </li>
-                                        <li> <a href="quotes">quotes :)</a> </li>
+                                        <li class="active"> <a href="/shop/reviews">Reviews</a> </li>
                                         <li> <a href="/shop">Go to shop</a> </li>
-                                        <li> <a href="#contact">Contact Us</a> </li>
-                                        <li> <a href="logout">Log out</a> </li>
+                                        <li class="active"> <a href="/shop/account">Account</a> </li>
+                                        <li class="active"> <a href="/shop/cart">Cart</a> </li>
+                                        <li> <a href="/logout">Log out</a> </li>
                                         <% } else { %>
-                                            <li class="active"> <a href="home">Home</a> </li>
-                                        <li> <a href="quotes">quotes :)</a> </li>
-                                        <li> <a href="/shop">Go to shop</a> </li>
-                                        <li> <a href="#contact">Contact Us</a> </li>
-                                        <li><a href="register">Register</a></li>
-                                        <li><a href="login">Login</a></li>
+                                            <li> <a href="/shop">Go to shop</a> </li>
+                                            <li class="active"> <a href="/shop/account">Account</a> </li>
+                                        <li><a href="/register">Register</a></li>
+                                        <li><a href="/login">Login</a></li>
                                         <% } %>
 
 

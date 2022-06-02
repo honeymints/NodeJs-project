@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>register</title>
+    <title>Cart</title>
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="server.js"></script>
 </head>
 <body style="background-color: #C6AEC7; min-height: 100%">
@@ -18,7 +18,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="/home">
                                         <b style="color: #A42CD6;
                               font-size: 30px;">Minho</b>
                                     </a>
@@ -33,8 +33,10 @@
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="/home">Home</a> </li>
-                                        <li class="active"> <a href="/account">Account</a> </li>
-                                        <li class="active"> <a href="/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop/newprod">New Products!</a> </li>
+                                        <li class="active"> <a href="/shop/reviews">Reviews</a> </li>
+                                        <li class="active"> <a href="/shop/account">Account</a> </li>
+                                        <li class="active"> <a href="/shop/cart">Cart</a> </li>
                                         <li class="active"> <a href="/shop">Shop</a> </li>
                                     </ul>
                                 </nav>
@@ -56,7 +58,7 @@
                     <h1>product name - <%=docss.name %></h1>
                     <center> <div class="descr">According to the Law "On Consumer Rights Protection", the buyer has the right to exchange the purchased goods that do not meet his needs or do not have the necessary properties. A mandatory condition of the exchange is the preservation of the presentation, consumer properties, seals or labels, a commodity or cash receipt or other documents issued to the consumer by the seller together with the goods sold. If a similar product is not on sale at the time of the exchange, the consumer has the right to purchase other goods from the available assortment with a corresponding recalculation of the cost of the goods, or to receive money back in the amount of the cost of the goods, or to exchange it for a similar one when the corresponding product is on sale for the first time.</div>
                     </center>
-                    <form action="/cart" method="post">
+                    <form action="/shop/cart" method="post">
                         <button name="name" value="<%=docss.name%>">add in cart</button>
                     </form>
                 <form action="/shop" method="get">

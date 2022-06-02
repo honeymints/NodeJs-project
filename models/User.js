@@ -16,9 +16,10 @@ const user= new Schema({
         type: String},
     age: {
         type: Number },
-    isAdmin: Boolean
-
+    role:{
+        type:String
+    },
 }, {timestamps:true})
 
-const User=mongoose.model('user', user);
+const User=mongoose.model('User', user);
 module.exports=User;

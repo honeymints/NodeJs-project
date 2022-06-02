@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Payment</title>
+    <title>History</title>
     <!-- style css -->
     <link rel="stylesheet" href="/css/style.css">
     <script src="server.js"></script>
@@ -33,7 +33,11 @@
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="/home">Home</a> </li>
-
+                                        <li class="active"> <a href="/shop/newprod">New Products!</a> </li>
+                                        <li class="active"> <a href="/shop/reviews">Reviews</a> </li>
+                                        <li class="active"> <a href="/shop/account">Account</a> </li>
+                                        <li class="active"> <a href="/shop/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop">Shop</a> </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -43,34 +47,27 @@
             </div>
         </div>
     </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <center>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-        <h3 style="color: #A42CD6;">Personal information for payments<img style="width: 100px;height: auto;"src="../images/2.png"> </h3>
-        <div>
-            <form action="/shop/success" method="post">
-                <label for="fname">Card number</label></br>
-                <input type="text" id="fname" required="" name="firstname" placeholder="Valid card number.."></br>
-
-                </br><label for="lname">Expiration date</label></br>
-                <input type="text" id="lname" required="" name="lastname" placeholder="MM/YY.."></br>
-
-                </br><label for="fname">CV code</label></br>
-                <input type="text" id="fname" required="" name="firstname" placeholder="CVC.."></br>
-
-
-                </br><label for="fname">Name of card</label></br>
-                <input type="text" id="fname" required="" name="firstname" placeholder="Name and surname..."></br>
-
-                <input type="submit" value="Submit"></br>
-            </form>
-            <form method="get" action="/shop/cart">
-            <input type="submit" value="Back">
-            </form>
+    <center><h2>Your history orders</h2></center>
+        <%docs.forEach(users=>{%>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span><strong>Order name: </strong><%=users.name %></span><br>
+                            <strong> Quantity: </strong> <%=users.quantity %>  <br />
+                        </div>
+                        <div class="col-md-12"><strong>order made on: </strong><%=users.time %></div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </center>
+        <%})
+        %>
 
+    </center>
     <footr>
         <div class="footer ">
             <div class="container">
@@ -125,52 +122,50 @@
             </div>
         </div>
     </footr>
+
 </header>
 </body>
 <style>
-    input[type=submit]{
-        transition-duration: 0.4s;
-        cursor: pointer;
-        width:25%;
-        height: 50px;
-        font-size: 20px;
-        color: white;
-        background-color: #9D00FF;
-        border-radius: 10px;
-        border: 1px solid white;
-        display: inline-block;
+
+    .panel-order .row {
+        border-bottom: 1px solid #ccc;
     }
-    button:hover {
-        background-color: #F2A2E8;
+    .panel-order .row:last-child {
+        border: 0px;
     }
-    img{
-        width: 60%;
-        height: auto;
+    .panel-order .row .col-md-1  {
+        text-align: center;
+        padding-top: 15px;
     }
-    .main{
-        display: flex;
-        justify-content: space-between;
+    .panel-order .row .col-md-1 img {
+        width: 100px;
+        max-height: 100px;
     }
-    .first{
-        width: 50%;
+    .panel-order .row .row {
+        border-bottom: 0;
     }
-    .second{
-        width: 50%;
+    .panel-order .row .col-md-11 {
+        border-left: 1px solid #ccc;
     }
-    td{
-        font-size: 18px;
+    .panel-order .row .row .col-md-12 {
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
-    input[type=text], select {
-        width: 50%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+    .panel-order .row .row .col-md-12:last-child {
+        font-size: 20px; !important;
+        color: #555;
+        background: #efefef;
+    }
+    .panel-order .btn-group {
+        margin: 0px;
+        padding: 0px;
+    }
+    .panel-order .panel-body {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .panel-order .panel-deading {
+        margin-bottom: 0;
     }
 </style>
 </html>
-
-
-▲

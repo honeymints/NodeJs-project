@@ -4,7 +4,7 @@
 <head>
     <title>register</title>
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="server.js"></script>
 </head>
 <body style="background-color: #C6AEC7; min-height: 100%">
@@ -18,7 +18,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="home">
+                                    <a href="/home">
                                         <b style="color: #A42CD6;
                               font-size: 30px;">Minho</b>
                                     </a>
@@ -32,7 +32,11 @@
                             <div class="limit-box">
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
-                                        <li class="active"> <a href="home">Home</a> </li>
+                                        <li class="active"> <a href="/home">Home</a> </li>
+                                        <li class="active"> <a href="/shop/newprod">New Products!</a> </li>
+                                        <li class="active"> <a href="/shop/reviews">Reviews</a> </li>
+                                        <li class="active"> <a href="/shop/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop">Shop</a> </li>
 
                                     </ul>
                                 </nav>
@@ -52,7 +56,7 @@
                 <div class="head">
                     <center>Edit </center>
                 </div>
-                <center><form method="POST" action="/edit">
+                <center><form method="POST" action="/admin/edit">
                         <div class="mb-3">
                             <label>Name</label>
                             <input type="text" name="oldUsername" id="oldUsername" class="form-control" />

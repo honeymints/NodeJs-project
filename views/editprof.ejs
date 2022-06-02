@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Payment</title>
+    <title>register</title>
     <!-- style css -->
     <link rel="stylesheet" href="/css/style.css">
     <script src="server.js"></script>
@@ -43,33 +43,33 @@
             </div>
         </div>
     </div>
-    <center>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <h3 style="color: #A42CD6;">Personal information for payments<img style="width: 100px;height: auto;"src="../images/2.png"> </h3>
-        <div>
-            <form action="/shop/success" method="post">
-                <label for="fname">Card number</label></br>
-                <input type="text" id="fname" required="" name="firstname" placeholder="Valid card number.."></br>
-
-                </br><label for="lname">Expiration date</label></br>
-                <input type="text" id="lname" required="" name="lastname" placeholder="MM/YY.."></br>
-
-                </br><label for="fname">CV code</label></br>
-                <input type="text" id="fname" required="" name="firstname" placeholder="CVC.."></br>
-
-
-                </br><label for="fname">Name of card</label></br>
-                <input type="text" id="fname" required="" name="firstname" placeholder="Name and surname..."></br>
-
-                <input type="submit" value="Submit"></br>
-            </form>
-            <form method="get" action="/shop/cart">
-            <input type="submit" value="Back">
-            </form>
+    <div class="main">
+        </br>
+        <div class="first">
+            <img src="https://i.pinimg.com/564x/28/9c/d3/289cd3de240da8e1071bee4bca8ce72b.jpg">
+            </br></br></br>
         </div>
-    </center>
+        <div class="second">
+            </br></br>
+            <h4>user profile</h4></br>
+
+            <%data.name.forEach(users=>{%>
+            <i><b>email:</b></i>
+            <i> <%=users.email %> </i> </br>
+            <i><b>city:</b></i>
+            <i><%=users.city %></i> </br>
+            <i><b>age:</b></i>
+            <i><%=users.age %></i> </br>
+
+            <%})
+            %>
+            </i>
+
+        </div>
+    </div>
 
     <footr>
         <div class="footer ">
@@ -128,49 +128,22 @@
 </header>
 </body>
 <style>
-    input[type=submit]{
-        transition-duration: 0.4s;
-        cursor: pointer;
-        width:25%;
-        height: 50px;
-        font-size: 20px;
-        color: white;
-        background-color: #9D00FF;
-        border-radius: 10px;
-        border: 1px solid white;
-        display: inline-block;
-    }
-    button:hover {
-        background-color: #F2A2E8;
-    }
-    img{
-        width: 60%;
-        height: auto;
+    img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
     }
     .main{
         display: flex;
         justify-content: space-between;
     }
     .first{
-        width: 50%;
+        width: 30%;
+        height: 100%;
     }
     .second{
-        width: 50%;
-    }
-    td{
-        font-size: 18px;
-    }
-    input[type=text], select {
-        width: 50%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+        width: 70%;
+        height: 100%;
     }
 </style>
 </html>
-
-
-▲

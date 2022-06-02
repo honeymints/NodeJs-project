@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>register</title>
+    <title>Account</title>
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="server.js"></script>
 </head>
 <body style="background-color: #C6AEC7; min-height: 100%">
@@ -18,7 +18,7 @@
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="home">
+                                    <a href="/home">
                                         <b style="color: #A42CD6;
                               font-size: 30px;">Minho</b>
                                     </a>
@@ -33,8 +33,10 @@
                                 <nav class="main-menu ">
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="/home">Home</a> </li>
-                                        <li class="active"> <a href="/account">Account</a> </li>
-                                        <li class="active"> <a href="/cart">Cart</a> </li>
+                                        <li class="active"> <a href="/shop/newprod">New Products!</a> </li>
+                                        <li class="active"> <a href="/shop/reviews">Reviews</a> </li>
+                                        <li class="active"> <a href="/shop/account">Account</a> </li>
+                                        <li class="active"> <a href="/shop/cart">Cart</a> </li>
                                         <li class="active"> <a href="/shop">Shop</a> </li></ul>
                                 </nav>
                             </div>
@@ -55,18 +57,27 @@
                 </div>
                 </br></br></br>
                 <center>
-                    <form action="/cart" method="get">
+                    <form action="/shop/profile" method="get">
+                        <button>profile</button>
+                    </form>
+                    <form action="/shop/cart" method="get">
                         <button>cart</button>
                     </form>
 
-                    <form action="/add" method="get">
-                        <button>history</button>
+                    <form action="/shop/chat" method="get">
+                        <button>chat</button>
+                    </form>
+                    <form action="/shop/history" method="get">
+                        <button>history</button><br><br>
 
                     </form>
 
                     <form action="/shop" method="get">
                         <button>back</button>
 
+                    </form>
+                    <form action="/logout" method="get">
+                        <button>log out</button>
                     </form>
                 </center>
             </div>

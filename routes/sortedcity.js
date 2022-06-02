@@ -5,7 +5,7 @@ const User=require('../models/User');
 let router=express.Router();
 app.use(express.static(__dirname));
 
-router.post('/', function(request, response, next){
+router.post('/sortCity', function(request, response, next){
 
 
     let mycity = {city: 1};

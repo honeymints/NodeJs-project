@@ -3,7 +3,7 @@ const express = require('express');
 let router=express.Router();
 const Item=require('../models/itemModel');
 
-router.post('/', (req, res) => {
+router.post('/items', (req, res) => {
 
     Item.findOne({name: req.body.name}, function (err, docss) {
         if (err){
