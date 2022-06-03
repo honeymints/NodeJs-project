@@ -60,7 +60,7 @@
                     <%data.username.forEach(users=>{%>
                     <center> <table>
                             <tr>
-                                <form action="admin/delete" method="post">
+                                <form action="/admin/delete" method="post">
                                     <input type="text"  name="email" value="<%=users.email%>">
                                     <input type="submit" name="boo" value="delete" />
                                 </form>

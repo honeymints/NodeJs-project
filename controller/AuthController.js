@@ -55,8 +55,6 @@ const register=(req, res, next) => {
                     res.redirect('/register');
                 })
         }
-
-
     })
 }
 const login =(req,res,next)=> {
