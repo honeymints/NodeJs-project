@@ -49,6 +49,7 @@
     </div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <center>
+        <div class="main">
     <center><h2>Your history orders</h2></center>
         <%docs.forEach(users=>{%>
         <div class="panel-body">
@@ -66,7 +67,7 @@
         </div>
         <%})
         %>
-
+        </div>
     </center>
     <footr>
         <div class="footer ">
@@ -126,9 +127,12 @@
 </header>
 </body>
 <style>
-
+.main{
+    height: 425px;
+}
     .panel-order .row {
         border-bottom: 1px solid #ccc;
+        width: 300px;
     }
     .panel-order .row:last-child {
         border: 0px;

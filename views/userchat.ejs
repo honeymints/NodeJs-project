@@ -76,9 +76,11 @@
                     <label for="lname">Message:</label><br>
                     <input type="text" id="lname" name="message"><br><br>
                     <input type="submit" value="Submit">
-                    <input type="reset">
+                    <input type="reset" value="Reset">
+
                 </form>
                 <center>
+                    </br>
                     <form action="/shop" method="get">
                         <button>back</button>
                     </form>
@@ -147,6 +149,28 @@
 </header>
 </body>
 <style>
+    input[type=submit] {
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width:100px;
+        height: auto;
+        font-size: 15px;
+        color: white;
+        background-color: #9D00FF;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+    input[type=reset] {
+        transition-duration: 0.4s;
+        cursor: pointer;
+        width:100px;
+        height: auto;
+        font-size: 15px;
+        color: white;
+        background-color: #9D00FF;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
     .head{
         background-color: #9D00FF;
         width: 75%;
@@ -183,6 +207,7 @@
     .main{
         display: flex;
         justify-content: space-between;
+        height: 425px;
     }
     .first{
         width: 50%;

@@ -45,7 +45,7 @@
     </div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    </br></br>
     <div class="main">
         </br>
         <div class="first">
@@ -53,9 +53,9 @@
             </br></br></br>
         </div>
         <div class="second">
-            </br></br>
-            <h4>user profile</h4></br>
-
+            </br>
+            <h4>user profile</h4>
+<hr style="width:50%">
             <%data.name.forEach(users=>{%>
             <i><b>email:</b></i>
             <i> <%=users.email %> </i> </br>
@@ -67,7 +67,8 @@
             <%})
             %>
             </i>
-
+            <hr style="width:50%">
+<i>some information about you, which we caught, whe you registered.</i>
         </div>
     </div>
 
@@ -136,6 +137,7 @@
     .main{
         display: flex;
         justify-content: space-between;
+        height: 425px;
     }
     .first{
         width: 30%;
